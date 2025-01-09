@@ -1,213 +1,98 @@
-# **Plugfy Core**
-
-### **A Modular Framework for Scalable and Flexible Applications**
-
-Plugfy Core is an open-source modular framework designed to create scalable, flexible, and dynamic applications. Developed by the Plugfy Foundation and community, Plugfy Core enables seamless integration of modules, components, and functions, allowing developers to build extensible systems using reusable, event-driven architectures.
+#**Plugfy Core** 
+is an open-source framework developed by the **Plugfy Foundation** to simplify, standardize, and accelerate the development of complex systems. 
+Its modular and scalable architecture enables the creation of flexible, dynamic, and highly reusable applications, integrating modules and business workflows efficiently and transparently.
 
 ---
 
-## **Table of Contents**
+## **The Origin of Plugfy Core**
+The **Plugfy** project was born in **2017**, within an industrial context, to address challenges in integration and communication across diverse systems, business rules, and heterogeneous environments. Initially focused on negotiation workflows and customizable modules, it quickly became a powerful solution for complex corporate environments.
 
-1. [Introduction](#introduction)
-2. [Key Features](#key-features)
-3. [Core Modules](#core-modules)
-4. [Installation](#installation)
-5. [Usage](#usage)
-6. [Contributing](#contributing)
-7. [Community](#community)
-8. [License](#license)
+In **2023**, the framework underwent a complete modernization, redesigned with a robust architecture focused on **work pipelines**, **distributed execution**, and **extensibility**. This evolution expanded its capabilities to operate at the operating system level and in virtualized environments, making it suitable for modern IT scenarios.
 
 ---
 
-## **Introduction**
+## **Plugfy Core Architecture**
 
-Plugfy Core is a lightweight, extensible framework built on C#, providing the foundation for modular application development. Its primary focus is to simplify the management of modules, components, and their interactions while offering out-of-the-box support for pipelines, condition handling, iteration, and more.
+The architecture of Plugfy Core is based on the following pillars:
 
-The project adheres to **GNU General Public License v3.0**, promoting transparency, collaboration, and community-driven innovation.
+### **1. Modularity**
+Systems are composed of **independent modules** that encapsulate business rules, specific functions, and events. This approach promotes:
+- **Code reuse**.
+- **Separation of responsibilities**.
+- **Ease of maintenance and application evolution**.
 
----
+### **2. Work Pipelines**
+Pipelines organize and process sequential or parallel tasks. They are ideal for:
+- **Data processing**.
+- **Integration with external systems**.
+- **Service orchestration**.
 
-## **Key Features**
+### **3. Extensibility**
+Modules can be extended or adapted to meet different needs, such as:
+- Operations at the **operating system level**.
+- **Virtualization of environments**.
+- Distributed execution in **microservices architectures**.
 
-- **Modular Architecture**:
-  Build applications using independent, reusable modules and components.
+### **4. Event Management**
+Plugfy Core supports global and custom events, enabling seamless communication between modules and components.
 
-- **Event-Driven**:
-  Seamless handling of system and custom events for lifecycle management.
-
-- **Pipeline Support**:
-  Define and execute complex workflows with sequential and parallel steps.
-
-- **Conditional Logic**:
-  Implement dynamic logic with `IF` and `SwitchCase` modules.
-
-- **Iteration Management**:
-  Easily process collections with the `ForEach` module.
-
-- **Extensibility**:
-  Add custom logic, modules, and components with ease.
-
-- **Open Source**:
-  Fully licensed under **GNU GPL v3.0**, ensuring long-term community collaboration.
-
----
-
-## **Core Modules**
-
-### **1. Plugfy.Foundation.Core.Module**
-- **Purpose**: The core module for managing modular applications.
-- **Features**:
-  - Define `Modules`, `Components`, and their `Functions`.
-  - Enable event-driven communication between modules.
-
-### **2. Plugfy.Foundation.Core.Module.Pipeline**
-- **Purpose**: Manage and execute workflows.
-- **Features**:
-  - Support sequential and parallel execution of steps.
-  - Connect and manage dependent `ModuleFunctions`.
-
-### **3. Plugfy.Foundation.Core.Module.IF**
-- **Purpose**: Handle conditional branching.
-- **Features**:
-  - Evaluate logical expressions.
-  - Execute `True` or `False` functions dynamically.
-
-### **4. Plugfy.Foundation.Core.Module.SwitchCase**
-- **Purpose**: Simplify decision-making logic.
-- **Features**:
-  - Map input values to specific functions.
-  - Execute corresponding logic for matched cases.
-
-### **5. Plugfy.Foundation.Core.Module.ForEach**
-- **Purpose**: Handle iteration over collections.
-- **Features**:
-  - Execute functions for each item in a collection.
-  - Support parallel execution for scalability.
+### **5. Conditionality and Iteration**
+Modules like `IF`, `SwitchCase`, and `ForEach` facilitate:
+- The implementation of **conditional flows**.
+- **Iterations** over collections.
 
 ---
 
-## **Installation**
+## **Use Cases**
 
-### **Prerequisites**
-1. C# 8 higher installed on your system.
-2. Git for cloning the repository.
+### **1. System Integration**
+Easily integrates heterogeneous systems, allowing seamless sharing of data and processes. Examples:
+- **ERP and CRM integration**.
+- Communication between **IoT systems**.
 
-### **Clone the Repository**
-```bash
-git clone https://github.com/PlugfyFoundation/Plugfy.Core.git
-cd Plugfy.Core
-```
+### **2. Process Automation**
+Automates business processes such as:
+- **Order and payment processing**.
+- **Real-time data analysis**.
+- **Report generation**.
 
-### **Build the Project**
-```bash
-dotnet build
-```
+### **3. Distributed Execution**
+Ideal for:
+- **Microservices architectures**.
+- Parallel execution in **distributed clusters**.
 
-### **Run Unit Tests**
-```bash
-dotnet test
-```
+### **4. Virtualized Environment Orchestration**
+Manages infrastructure and virtualized operations:
+- Orchestrates **virtual machines** and **containers**.
+- Manages **infrastructure as code**.
 
----
-
-## **Usage**
-
-### **Basic Example: Create and Execute a Module**
-
-#### Define a Module
-```csharp
-using Plugfy.Foundation.Core.Module;
-
-var coreModule = new Module("CoreModule");
-coreModule.Parameters.Add("Version", "1.0");
-```
-
-#### Add a Component and Function
-```csharp
-var loggingComponent = new Component("LoggingComponent");
-var logFunction = new Function("LogMessage");
-logFunction.Parameters.Add("Message", "This is a test log.");
-
-loggingComponent.AddFunction(logFunction);
-coreModule.AddComponent(loggingComponent);
-```
-
-#### Execute a Function
-```csharp
-coreModule.Components.First().Functions.First().Execute();
-```
+### **5. Modular Scalability**
+Perfect for high-demand environments, such as:
+- **E-commerce platforms**.
+- **Financial systems** for transaction processing.
 
 ---
 
-### **Advanced Example: Execute a Pipeline**
+## **Key Differentiators of Plugfy Core**
 
-#### Create a Pipeline
-```csharp
-using Plugfy.Foundation.Core.Module.Pipeline;
-
-var pipeline = new Pipeline("DataProcessingPipeline");
-
-var step1Function = new ModuleFunction("LoadData");
-var step2Function = new ModuleFunction("ProcessData");
-
-var step1 = new PipelineStep("Step1", false, step1Function, step2Function);
-pipeline.AddStep(step1);
-
-pipeline.Execute();
-```
+1. **Transparency**: Licensed under GNU GPL v3.0, promoting open collaboration.
+2. **Standardization**: Provides a uniform approach to system creation and integration.
+3. **Flexibility**: Supports everything from small projects to large infrastructures.
+4. **Reusability**: Modules and pipelines are easily reusable.
+5. **Advanced Execution**: Native support for parallelism and virtualization.
 
 ---
 
-## **Contributing**
+## **Next Steps**
+**Plugfy Core** is a living platform in constant evolution. Our goals include:
+- **Expanding capabilities**.
+- **Integrating new technologies**.
+- **Fostering a collaborative community** to drive technological innovation.
 
-We welcome contributions from the community to make Plugfy Core better! Follow these steps to get started:
-
-1. **Fork the Repository**: Click the fork button in the GitHub repository.
-2. **Clone Your Fork**:
-   ```bash
-   git clone https://github.com/your-username/PlugfyCore.git
-   ```
-3. **Create a Feature Branch**:
-   ```bash
-   git checkout -b feature/your-feature
-   ```
-4. **Commit Your Changes**:
-   ```bash
-   git commit -m "Add your message here"
-   ```
-5. **Push Your Changes**:
-   ```bash
-   git push origin feature/your-feature
-   ```
-6. **Create a Pull Request**: Open a pull request on the main repository.
-
-### **Code of Conduct**
-We adhere to the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct/). Please read and follow it while contributing.
-
----
-
-## **Community**
-
-Join the Plugfy Foundation community to collaborate, learn, and innovate:
-
-- **GitHub Discussions**: Share ideas and ask questions in the repository discussions.
-- **Discord**: Join our [Discord server](#) for real-time collaboration (link coming soon).
-- **Twitter**: Follow us on [Twitter](https://twitter.com/PlugfyFoundation) for updates.
+**Join us** on this journey to transform the development of complex systems.  
+**Plugfy Core**: The foundation for the modular future.
 
 ---
 
 ## **License**
-
-Plugfy Core is licensed under the **GNU General Public License v3.0**. You are free to use, modify, and distribute the software, provided you adhere to the license terms.
-
-**Read more**: [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html)
-
----
-
-## **Acknowledgments**
-
-Special thanks to:
-- The Plugfy Foundation for their vision and leadership.
-- The open-source community for their contributions and support.
-
-Letâs build the future of modular application development together!
+Plugfy Core is licensed under the **GNU General Public License v3.0**. For more information, see [GNU GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
