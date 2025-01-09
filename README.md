@@ -21,7 +21,7 @@ Plugfy Core is an open-source modular framework designed to create scalable, fle
 
 ## **Introduction**
 
-Plugfy Core is a lightweight, extensible framework built on .NET Core, providing the foundation for modular application development. Its primary focus is to simplify the management of modules, components, and their interactions while offering out-of-the-box support for pipelines, condition handling, iteration, and more.
+Plugfy Core is a lightweight, extensible framework built on C#, providing the foundation for modular application development. Its primary focus is to simplify the management of modules, components, and their interactions while offering out-of-the-box support for pipelines, condition handling, iteration, and more.
 
 The project adheres to **GNU General Public License v3.0**, promoting transparency, collaboration, and community-driven innovation.
 
@@ -89,13 +89,13 @@ The project adheres to **GNU General Public License v3.0**, promoting transparen
 ## **Installation**
 
 ### **Prerequisites**
-1. .NET Core 3.1 or higher installed on your system.
+1. C# 8 higher installed on your system.
 2. Git for cloning the repository.
 
 ### **Clone the Repository**
 ```bash
-git clone https://github.com/PlugfyFoundation/PlugfyCore.git
-cd PlugfyCore
+git clone https://github.com/PlugfyFoundation/Plugfy.Core.git
+cd Plugfy.Core
 ```
 
 ### **Build the Project**
