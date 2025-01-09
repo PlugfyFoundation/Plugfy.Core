@@ -1,5 +1,5 @@
-#**Plugfy Core** 
-is an open-source framework developed by the **Plugfy Foundation** to simplify, standardize, and accelerate the development of complex systems. 
+# **Plugfy Core**
+Is an open-source framework developed by the **Plugfy Foundation** to simplify, standardize, and accelerate the development of complex systems. 
 Its modular and scalable architecture enables the creation of flexible, dynamic, and highly reusable applications, integrating modules and business workflows efficiently and transparently.
 
 ---
