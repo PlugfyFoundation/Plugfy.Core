@@ -1,93 +1,111 @@
-# **Plugfy Core**
-Is an open-source framework developed by the **Plugfy Foundation** to simplify, standardize, and accelerate the development of complex systems. 
-Its modular and scalable architecture enables the creation of flexible, dynamic, and highly reusable applications, integrating modules and business workflows efficiently and transparently.
+
+
+# Plugfy Core
+
+## **What is Plugfy Core?**
+**Plugfy Core** is an open-source framework developed by the **Plugfy Foundation** to simplify, standardize, and accelerate the development of complex systems. 
+Its modular and scalable architecture enables the creation of flexible, dynamic, and highly reusable applications by efficiently and transparently integrating modules and business workflows.
 
 ---
 
 ## **The Origin of Plugfy Core**
-The **Plugfy** project was born in **2017**, within an industrial context, to address challenges in integration and communication across diverse systems, business rules, and heterogeneous environments. Initially focused on negotiation workflows and customizable modules, it quickly became a powerful solution for complex corporate environments.
+The **Plugfy** project was born in **2017**, within an industrial context, to address the challenges of integration and communication between different systems, business rules, and heterogeneous environments. 
+Initially focused on negotiation flows and customizable modules, it quickly became a powerful solution for managing complexity in corporate environments.
 
-In **2023**, the framework underwent a complete modernization, redesigned with a robust architecture focused on **work pipelines**, **distributed execution**, and **extensibility**. This evolution expanded its capabilities to operate at the operating system level and in virtualized environments, making it suitable for modern IT scenarios.
+In **2023**, the framework was completely modernized, introducing a new architecture focused on **work pipelines**, **distributed execution**, and **extensibility**. This evolution expanded its capabilities to operate at the system level and in virtualized environments, making it ideal for modern IT scenarios.
 
 ---
 
-## **Plugfy Core Architecture**
+## **Architecture of Plugfy Core**
 
-The architecture of Plugfy Core is based on the following pillars:
+### **High-Level Design**
 
-### **1. Modularity**
-Systems are composed of **independent modules** that encapsulate business rules, specific functions, and events. This approach promotes:
-- **Code reuse**.
-- **Separation of responsibilities**.
-- **Ease of maintenance and application evolution**.
-
-### **2. Work Pipelines**
-Pipelines organize and process sequential or parallel tasks. They are ideal for:
-- **Data processing**.
-- **Integration with external systems**.
-- **Service orchestration**.
-
-### **3. Extensibility**
-Modules can be extended or adapted to meet different needs, such as:
-- Operations at the **operating system level**.
-- **Virtualization of environments**.
-- Distributed execution in **microservices architectures**.
-
-### **4. Event Management**
-Plugfy Core supports global and custom events, enabling seamless communication between modules and components.
-
-### **5. Conditionality and Iteration**
-Modules like `IF`, `SwitchCase`, and `ForEach` facilitate:
-- The implementation of **conditional flows**.
-- **Iterations** over collections.
+```
+Plugfy Core
+├── Kernel
+│   ├── Event Manager          (Manages system and custom events)
+│   ├── Module Loader          (Dynamically loads and manages modules)
+│   ├── Execution Engine       (Orchestrates workflows and pipelines)
+│   └── Configuration Manager  (Manages system and module configurations)
+├── Modules
+│   ├── Core Modules
+│   │   ├── IF                (Conditional logic handler)
+│   │   ├── SwitchCase        (Decision-making logic handler)
+│   │   ├── ForEach           (Iterative execution handler)
+│   │   └── Pipeline          (Workflow execution handler)
+│   └── Custom Modules         (User-defined modules)
+├── Integrations
+│   ├── Operating System       (System-level operations)
+│   ├── Cloud Services         (Interactions with cloud APIs)
+│   ├── External APIs          (Third-party API integration)
+│   └── Databases              (Database connectivity and management)
+└── External Interfaces        (Exposes REST APIs for module interaction)
+```
 
 ---
 
 ## **Use Cases**
 
 ### **1. System Integration**
-Easily integrates heterogeneous systems, allowing seamless sharing of data and processes. Examples:
-- **ERP and CRM integration**.
-- Communication between **IoT systems**.
+- **Scenario**: Integrate an ERP with a CRM and a logistics system to automate order processing and tracking.
+- **Solution**:
+  - Use the `Pipeline` module to orchestrate workflows.
+  - Combine `SwitchCase` for decision-making and `ForEach` to iterate over batch orders.
 
-### **2. Process Automation**
-Automates business processes such as:
-- **Order and payment processing**.
-- **Real-time data analysis**.
-- **Report generation**.
-
-### **3. Distributed Execution**
-Ideal for:
-- **Microservices architectures**.
-- Parallel execution in **distributed clusters**.
-
-### **4. Virtualized Environment Orchestration**
-Manages infrastructure and virtualized operations:
-- Orchestrates **virtual machines** and **containers**.
-- Manages **infrastructure as code**.
-
-### **5. Modular Scalability**
-Perfect for high-demand environments, such as:
-- **E-commerce platforms**.
-- **Financial systems** for transaction processing.
+### **2. Automating Workflows**
+- **Scenario**: Automate data analysis from multiple sources and generate real-time reports.
+- **Solution**:
+  - Use the `ForEach` module to iterate over data sources.
+  - Deploy a custom module to analyze data and a logging module to track the process.
 
 ---
 
-## **Key Differentiators of Plugfy Core**
+## **Examples**
 
-1. **Transparency**: Licensed under GNU GPL v3.0, promoting open collaboration.
-2. **Standardization**: Provides a uniform approach to system creation and integration.
-3. **Flexibility**: Supports everything from small projects to large infrastructures.
-4. **Reusability**: Modules and pipelines are easily reusable.
-5. **Advanced Execution**: Native support for parallelism and virtualization.
+### **Example 1: Creating a Simple Module**
+```csharp
+using Plugfy.Foundation.Core.Module;
+
+var simpleModule = new Module("SimpleModule");
+var simpleFunction = new Function("PrintMessage");
+
+simpleFunction.Execute = (parameters) =>
+{
+    var message = parameters.ContainsKey("Message") ? parameters["Message"] : "Hello, Plugfy!";
+    Console.WriteLine(message);
+};
+
+simpleModule.AddFunction(simpleFunction);
+
+// Execute the function
+simpleFunction.Execute(new Dictionary<string, object> { { "Message", "Welcome to Plugfy Core!" } });
+```
+
+### **Example 2: Configuring and Running a Pipeline**
+```csharp
+using Plugfy.Foundation.Core.Module.Pipeline;
+
+var dataPipeline = new Pipeline("DataPipeline");
+
+var step1Function = new Function("LoadData");
+step1Function.Execute = (parameters) => Console.WriteLine("Loading Data...");
+
+var step2Function = new Function("ProcessData");
+step2Function.Execute = (parameters) => Console.WriteLine("Processing Data...");
+
+var step1 = new PipelineStep("Step1", false, step1Function, step2Function);
+
+dataPipeline.AddStep(step1);
+dataPipeline.Execute();
+```
 
 ---
 
 ## **Next Steps**
-**Plugfy Core** is a living platform in constant evolution. Our goals include:
-- **Expanding capabilities**.
-- **Integrating new technologies**.
-- **Fostering a collaborative community** to drive technological innovation.
+**Plugfy Core** is a living platform, constantly evolving. Our goals are to:
+- **Expand capabilities**.
+- **Integrate new technologies**.
+- **Build a collaborative community** that drives technological innovation.
 
 **Join us** on this journey to transform the development of complex systems.  
 **Plugfy Core**: The foundation for the modular future.
