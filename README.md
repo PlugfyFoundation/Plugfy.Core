@@ -6,7 +6,7 @@ Its modular and scalable architecture enables the creation of flexible, dynamic,
 
 ---
 
-## **The Origin of Plugfy Core**
+## **The Origin of Plugfy**
 The **Plugfy** project was born in **2017**, within an industrial context, to address the challenges of integration and communication between different systems, business rules, and heterogeneous environments. 
 Initially focused on negotiation flows and customizable modules, it quickly became a powerful solution for managing complexity in corporate environments.
 
@@ -32,11 +32,6 @@ Plugfy Core
 │   │   ├── ForEach           (Iterative execution handler)
 │   │   └── Pipeline          (Workflow execution handler)
 │   └── Custom Modules         (User-defined modules)
-├── Integrations
-│   ├── Operating System       (System-level operations)
-│   ├── Cloud Services         (Interactions with cloud APIs)
-│   ├── External APIs          (Third-party API integration)
-│   └── Databases              (Database connectivity and management)
 └── External Interfaces        (Exposes REST APIs for module interaction)
 ```
 
