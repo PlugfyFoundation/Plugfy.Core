@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugfy.Core.Extension.Libra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugfy.Core.Data.Communication.STDInOut", "Plugfy.Core.Data.Communication.STDInOut\Plugfy.Core.Data.Communication.STDInOut.csproj", "{A39B1DAE-A604-4E03-86B9-945A7D3CC163}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugfy.Core.Data.Communication.MemoryShared", "Plugfy.Core.Data.Communication.SharedMemory\Plugfy.Core.Data.Communication.MemoryShared.csproj", "{7DD53679-6838-4008-B575-360D4946282C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugfy.Core.Data.Communication.SharedMemory", "Plugfy.Core.Data.Communication.SharedMemory\Plugfy.Core.Data.Communication.SharedMemory.csproj", "{7DD53679-6838-4008-B575-360D4946282C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
