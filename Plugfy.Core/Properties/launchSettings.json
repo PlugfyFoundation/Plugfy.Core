@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Plugfy": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

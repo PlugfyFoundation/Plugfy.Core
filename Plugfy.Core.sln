@@ -27,6 +27,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{B08F4C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugfy.Core.Extension.Library", "Plugfy.Core.Extension.Library\Plugfy.Core.Extension.Library.csproj", "{7766D3F4-F044-9CD3-3AB5-0485B11049AE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugfy.Core", "Plugfy.Core\Plugfy.Core.csproj", "{C71186D8-EE2D-7557-DC7E-58F85A60C792}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{7766D3F4-F044-9CD3-3AB5-0485B11049AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7766D3F4-F044-9CD3-3AB5-0485B11049AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7766D3F4-F044-9CD3-3AB5-0485B11049AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C71186D8-EE2D-7557-DC7E-58F85A60C792}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C71186D8-EE2D-7557-DC7E-58F85A60C792}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C71186D8-EE2D-7557-DC7E-58F85A60C792}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C71186D8-EE2D-7557-DC7E-58F85A60C792}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
