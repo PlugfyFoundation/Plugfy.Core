@@ -9,7 +9,7 @@
     <ApplicationIcon>.\plugfy.core.ico</ApplicationIcon>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <SignAssembly>False</SignAssembly>
-    <Title>Plugfy.Core.Commons</Title>
+    <Title>Plugfy.Core</Title>
     <Authors>Willian Patrick dos Santos</Authors>
     <Company>Plugfy</Company>
     <Copyright>Plugfy 2017 - 2025</Copyright>
@@ -24,6 +24,10 @@
     <RepositoryUrl>https://github.com/PlugfyFoundation/Plugfy.Core</RepositoryUrl>
     <PackageTags>Plugfy</PackageTags>
     <PackAsTool>True</PackAsTool>
+    <AssemblyName>plugfy</AssemblyName>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <PackageId>Plugfy.Core</PackageId>
+    <Product>Plugfy.Core</Product>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
