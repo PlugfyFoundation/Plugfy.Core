@@ -1,5 +1,5 @@
 ﻿ 
-![logo_plugfy_core_foundation_256x55](https://raw.githubusercontent.com/PlugfyFoundation/Plugfy.Core/refs/heads/main/plugfy-core-fundation-header.png)
+![logo_plugfy_core_foundation_256x55](https://raw.githubusercontent.com/PlugfyFoundation/Plugfy.Solution/refs/heads/main/plugfy-core-fundation-header.png)
 
 **Plugfy Core** is an open-source framework developed by the **Plugfy Foundation** to simplify, standardize, and accelerate the development of complex systems. 
 Its modular and scalable architecture enables the creation of flexible, dynamic, and highly reusable applications by efficiently and transparently integrating modules and business workflows.
