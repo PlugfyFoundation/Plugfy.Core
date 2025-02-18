@@ -1,0 +1,7 @@
+services:
+  plugfy.core:
+    image: ${DOCKER_REGISTRY-}plugfy/core
+    build:
+      context: .
+      dockerfile: Dockerfile
+

@@ -12,9 +12,9 @@ using Newtonsoft.Json;
 
 using Plugfy.Core.Commons.Runtime;
 
-namespace Plugfy
+namespace Plugfy.Core
 {
-    class Program
+    public class Program
     {
         private static IConfiguration Configuration { get; set; }
 
