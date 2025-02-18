@@ -70,11 +70,11 @@
 
   <ItemGroup>
     <PackageReference Include="CommandLineParser" Version="2.9.1" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="9.0.1" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="9.0.1" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.1" />
-    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
-    <PackageReference Include="Plugfy.Core.Commons" Version="1.0.12" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="9.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="9.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.1" />
+    <PackageReference Include="Plugfy.Core.Commons" Version="1.0.15" />
   </ItemGroup>
 
   <ItemGroup>
@@ -82,10 +82,6 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Extensions\" />
   </ItemGroup>
 
 </Project>
