@@ -22,13 +22,13 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: 📦 Restore dependencies
-        run: dotnet restore
+        run: dotnet restore "Plugfy.Core.csproj"
 
       - name: 🏗️ Build project (Ensures DLLs exist)
-        run: dotnet build --configuration Release --no-restore
+        run: dotnet build "Plugfy.Core.csproj" --configuration Release --no-restore
 
       - name: 🚀 Generate NuGet package with metadata
-        run: dotnet pack --configuration Release --output nupkg --no-build /p:Version=1.0.${{ github.run_number }}
+        run: dotnet pack "Plugfy.Core.csproj" --configuration Release --output nupkg --no-build /p:Version=1.0.${{ github.run_number }}
 
       - name: 🔑 Publish to NuGet
         run: dotnet nuget push "nupkg/*.nupkg" --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }} --skip-duplicate
